@@ -1,0 +1,16 @@
+    <style>
+        /* Add your styles for the navigation bar here */
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+        a {
+            color: white;
+            margin-right: 10px;
+        }
+    </style>
+<nav>
+    <a href="/home" th:class="${active == 'home' ? 'active' : ''}">Home</a>
+    <a href="/contact" th:class="${active == 'contact' ? 'active' : ''}">Contact</a>
+</nav>

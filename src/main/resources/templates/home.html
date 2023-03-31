@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+
+<div th:replace="navbar :: navbar(active='home')"></div>
+
+<section th:each="blog: ${blogs}">
+    <div>
+        <h4 th:text="${blog.title}"></h4>
+        <p th:text="${blog.content}"></p>
+    </div>
+</section>
+
+
+<hr>
+<footer >
+    <ul th:each="blog: ${recent_blogs}">
+        <li >
+            <span th:text="${blog.title}"></span>
+            <span  th:text="${blog.createdTime}"></span>
+        </li>
+    </ul>
+</footer>
+
+
+</body>
+</html>
