@@ -8,7 +8,7 @@ import jakarta.persistence.Id
 @Entity
 data class Form(
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long = -1L,
+    var id: Long = -1L,
     val name: String,
     val email: String,
     val phone: String,

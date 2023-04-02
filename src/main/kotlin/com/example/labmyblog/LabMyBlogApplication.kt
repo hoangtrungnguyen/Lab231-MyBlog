@@ -12,3 +12,5 @@ class LabMyBlogApplication
 fun main(args: Array<String>) {
     runApplication<LabMyBlogApplication>(*args)
 }
+
+
