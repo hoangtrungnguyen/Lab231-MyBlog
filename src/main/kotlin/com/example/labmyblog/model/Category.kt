@@ -1,14 +1,10 @@
 package com.example.labmyblog.model
 
-import jakarta.persistence.Entity
-import jakarta.persistence.GeneratedValue
-import jakarta.persistence.GenerationType
-import jakarta.persistence.Id
+import org.springframework.data.annotation.Id
 
 
-@Entity
 data class Category(
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
     val id: Long = -1L,
     val name: String,
 ){

@@ -2,6 +2,7 @@ package com.example.labmyblog.controller
 
 import com.example.labmyblog.repository.BlogRepository
 import com.example.labmyblog.repository.CategoryRepository
+import org.springframework.data.domain.PageRequest
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.GetMapping
@@ -17,9 +18,14 @@ class BlogController(
         val blogs = blogRepository.findAll()
         model.addAttribute("blogs", blogs)
         model.addAttribute("active","home")
-        val recent = blogRepository.findLatestBlog()
+
+        //Get 5 recent rows in the table
+        val pageable = PageRequest.of(0, 5);
+        val recent = blogRepository.findAll(pageable)
+
         model.addAttribute("recent_blogs",recent)
         val categories = categoryRepository.findAll()
+
         model.addAttribute("categories", categories)
 
         return "home"
@@ -28,6 +34,12 @@ class BlogController(
     @GetMapping("/contact")
     fun contact(model: Model): String {
         model.addAttribute("active","contact")
+
+        val categories = categoryRepository.findAll()
+
+        model.addAttribute("categories", categories)
+
+
         return "contact"
     }
 

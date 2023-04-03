@@ -28,8 +28,11 @@ dependencies {
 //    implementation("org.springframework.boot:spring-data-jpa")
 //    implementation("org.hibernate.javax.persistence:hibernate-jpa-2.1-api")
     implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-    implementation("com.h2database:h2")
+
+    implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
+    implementation("org.mongodb:mongodb-driver-sync")
+
+    compileOnly("com.h2database:h2")
     compileOnly("org.projectlombok:lombok")
 //    developmentOnly("org.springframework.boot:spring-boot-devtools")
     annotationProcessor("org.projectlombok:lombok")

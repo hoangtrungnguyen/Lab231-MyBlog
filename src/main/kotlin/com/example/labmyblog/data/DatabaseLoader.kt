@@ -17,9 +17,9 @@ internal class LoadDatabase {
     @Bean
     fun initDatabase(repository: BlogRepository, categoryRepository: CategoryRepository): CommandLineRunner {
         return CommandLineRunner { args: Array<String?>? ->
-            log.info("Preloading " + repository.save(Blog(1,"Bilbo Baggins", "burglar", "2022-03-12")))
-            log.info("Preloading " + repository.save(Blog(2, "Frodo Baggins", "thief", "2022-01-01")), )
-            log.info("Preloading " + repository.save(Blog(3, "Layout", "thief lorem inspu", "2022-03-01")), )
+            log.info("Preloading " + repository.save(Blog(1,"Bilbo Baggins", "burglar", "2022-03-12", img_1)))
+            log.info("Preloading " + repository.save(Blog(2, "Frodo Baggins", "thief", "2022-01-01", img_2)), )
+            log.info("Preloading " + repository.save(Blog(3, "Layout", "thief lorem inspu", "2022-03-01", img_3)), )
             log.info("Preloading " + categoryRepository.save(Category(1, "Art")))
             log.info("Preloading " + categoryRepository.save(Category(2, "Beauty")))
             log.info("Preloading " + categoryRepository.save(Category(3, "Food")))
@@ -32,3 +32,8 @@ internal class LoadDatabase {
         private val log: Logger = LoggerFactory.getLogger(LoadDatabase::class.java)
     }
 }
+
+
+const val img_1 = "https://images.unsplash.com/photo-1679678691007-ae67bc760699?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
+const val img_2 = "https://images.unsplash.com/photo-1680246637339-780b4dbf1034?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+const val img_3 = "https://images.unsplash.com/photo-1604537529428-15bcbeecfe4d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80"

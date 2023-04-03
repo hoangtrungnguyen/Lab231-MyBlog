@@ -1,20 +1,17 @@
 package com.example.labmyblog.model
 
-import jakarta.persistence.Entity
-import jakarta.persistence.GeneratedValue
-import jakarta.persistence.GenerationType
-import jakarta.persistence.Id
+import org.springframework.data.annotation.Id
 
 
-@Entity
 data class Blog (
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long = -1L,
+    @Id
+    val id: Long?,
     val title: String,
     val content: String,
     val createdTime: String,
+    val imageUrl: String
 ){
 
-    constructor() :this(-1L, "", "", "")
+    constructor() :this(-1L, "", "", "", "")
 }
 
