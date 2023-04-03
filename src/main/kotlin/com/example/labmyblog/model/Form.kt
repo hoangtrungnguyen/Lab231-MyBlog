@@ -5,7 +5,9 @@ import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
 
-@Entity
+@Entity(
+
+)
 data class Form(
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = -1L,
