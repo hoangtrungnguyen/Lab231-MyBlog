@@ -1,0 +1,14 @@
+
+body::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80");
+    background-size: cover; /* Scale the image to cover the entire background */
+    opacity: 0.5; /* Set the opacity of the background image */
+    z-index: -1; /* Push the background image behind other content */
+}
