@@ -1,9 +1,9 @@
 package com.example.labmyblog.repository
 
 import com.example.labmyblog.model.Category
-import org.springframework.data.mongodb.repository.MongoRepository
+import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
 
 @Repository
-interface CategoryRepository : MongoRepository<Category, Long> {
+interface CategoryRepository : JpaRepository<Category, Long> {
 }

@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping
 
 @Controller
 class BlogController(
-    private val blogRepository: BlogRepository,
-    private val categoryRepository: CategoryRepository
+   private val blogRepository: BlogRepository,
+   private val categoryRepository: CategoryRepository
     ) {
 
     @GetMapping("/home")

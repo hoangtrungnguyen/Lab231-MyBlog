@@ -1,10 +1,12 @@
 package com.example.labmyblog.model
 
-import org.springframework.data.annotation.Id
+import jakarta.persistence.Entity
+import jakarta.persistence.GeneratedValue
+import jakarta.persistence.GenerationType
 
-
+@Entity
 data class Form(
-    @Id
+    @jakarta.persistence.Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long = -1L,
     val name: String,
     val email: String,

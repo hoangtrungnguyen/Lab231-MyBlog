@@ -2,10 +2,10 @@ package com.example.labmyblog
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
-import org.springframework.data.mongodb.repository.config.EnableMongoRepositories
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories
 
 @SpringBootApplication
-@EnableMongoRepositories(basePackages = ["com.example.labmyblog.repository"])
+@EnableJpaRepositories(basePackages = ["com.example.labmyblog.repository"])
 class LabMyBlogApplication
 
 fun main(args: Array<String>) {
